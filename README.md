@@ -1,4 +1,4 @@
-# NEXUS · Multi-Agent LLM Trading Framework
+# NEXUS · Multi-Agent LLM Trading Framework to create a new line Live Demo: https://nexus-tradin.netlify.app
 
 A full-stack financial research and execution framework that combines AI analyst agents, sentiment models, portfolio reasoning, and provider integrations into a single trading stack.
 
