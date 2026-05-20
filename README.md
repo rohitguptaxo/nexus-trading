@@ -1,79 +1,61 @@
-# NEXUS · Multi-Agent LLM Trading Framework to create a new line Live Demo: https://nexus-tradin.netlify.app
+# 🍯 Jenu Gumpu — Honey Hunters Collective App
 
-A full-stack financial research and execution framework that combines AI analyst agents, sentiment models, portfolio reasoning, and provider integrations into a single trading stack.
+A mobile-first web app built for the **Jenu Gumpu honey hunting community** in Karnataka, India. It helps tribal honey hunters manage harvests, negotiate with retailers, track batch quality, and get AI-powered market price estimates.
 
-![NEXUS Dashboard](https://img.shields.io/badge/status-alpha-blue) ![React](https://img.shields.io/badge/React-18-blue) ![Claude](https://img.shields.io/badge/Powered%20by-Claude%20Sonnet-purple)
+## 🌐 Live Demo
+👉 [https://rohitguptaxo.github.io/jenu-gumpu/](https://rohitguptaxo.github.io/jenu-gumpu/)
 
 ---
 
-## What's inside
+## 📱 Features
 
-| Module | Description |
-|---|---|
-| **Dashboard** | Live portfolio overview, agent status, signal feed, execution log |
-| **Strategy Builder** | Visual no-code editor for entry/exit conditions with AI agent gates |
-| **Backtester** | 4-year simulation with equity curve, Sharpe, Calmar, trade log |
-| **Agent Debate** | 4 agents (Fundamental, Sentiment, Risk, Market) debate any trade via Claude API |
-| **Param Optimizer** | Bayesian / Grid search across strategy parameters with live Sharpe chart |
-| **Research Agent** | Natural language research queries answered by Claude with quant context |
+- **Dashboard** — Live stock overview, harvest stats, and active negotiation status
+- **Harvest Tracking** — Log honey batches with grade (A/B/C), moisture %, source forest, and hunter name
+- **Batch Traceability** — Scan or enter a batch ID to trace origin, location, date, and quality
+- **Retailer Management** — Add and manage retailers across cities with contact info
+- **SMS Broadcast** — Send bulk price offers to active retailers with one tap
+- **AI Price Estimator** — Get real-time honey price estimates for any Indian city powered by Claude AI
+- **Profit Calculator** — Instantly calculate net profit and margin per sale
+- **Market Prices** — View current honey prices across major cities with trend indicators
+- **Bilingual UI** — Supports Kannada and English
 
-## Agent Pipeline
+---
 
-```
-MarketScanner
-     │
-     ├── FundamentalAnalyst ──┐
-     │                        ├── RiskManager ── PortfolioOptimizer ── ExecutionAgent
-     └── SentimentAnalyst ───┘
-```
+## 🛠️ Tech Stack
 
-Orchestration: parallel fan-out → weighted consensus voting → sequential risk check → execution.  
-Minimum **3/4 agents** must vote PROCEED for a trade to execute.
+- Pure HTML, CSS, JavaScript (single file — no frameworks, no build tools)
+- [Sora](https://fonts.google.com/specimen/Sora) + [Noto Sans Kannada](https://fonts.google.com/noto/specimen/Noto+Sans+Kannada) fonts
+- [Anthropic Claude API](https://www.anthropic.com/) for AI price estimation
 
-## Quick start
+---
+
+## 🚀 Getting Started
+
+No installation needed. Just open `index.html` in any browser — or visit the live demo link above.
 
 ```bash
-# 1. Clone
-git clone https://github.com/YOUR_USERNAME/nexus-trading.git
-cd nexus-trading
-
-# 2. Install
-npm install
-
-# 3. Set your API key
-cp .env.example .env
-# Edit .env and add your VITE_ANTHROPIC_API_KEY
-
-# 4. Run
-npm run dev
-# → http://localhost:3000
+git clone https://github.com/rohitguptaxo/jenu-gumpu.git
+cd jenu-gumpu
+open index.html
 ```
 
-## Environment variables
+---
 
-| Variable | Required | Description |
-|---|---|---|
-| `VITE_ANTHROPIC_API_KEY` | Yes | Claude API key from [console.anthropic.com](https://console.anthropic.com) |
-| `VITE_POLYGON_API_KEY` | Optional | Real-time market data |
-| `VITE_NEWS_API_KEY` | Optional | News sentiment feed |
+## 📦 Project Structure
 
-## Tech stack
+```
+jenu-gumpu/
+└── index.html   # Entire app — styles, markup, and logic in one file
+```
 
-- **Frontend** — React 18 + Vite
-- **Charts** — Recharts
-- **AI** — Anthropic Claude Sonnet (`claude-sonnet-4-20250514`)
-- **Styling** — Pure CSS-in-JS (no Tailwind dependency)
-- **Data** — Polygon.io (market), NewsAPI (sentiment), SEC EDGAR (fundamentals)
+---
 
-## Roadmap
+## 🌿 About Jenu Gumpu
 
-- [ ] Live IBKR execution via TWS API
-- [ ] Real Polygon.io market data integration
-- [ ] Persistent strategy storage (Supabase)
-- [ ] Multi-user team workspace
-- [ ] Webhook alerts (Slack, email)
-- [ ] Next.js migration for server-side agent orchestration
+*Jenu Gumpu* (ಜೇನು ಗುಂಪು) means "Honey Group" in Kannada. The app is designed to empower indigenous honey hunters in the Western Ghats region of Karnataka to get fair prices, maintain quality records, and connect directly with urban retailers — cutting out middlemen.
 
-## License
+---
 
-MIT
+## 📄 License
+
+MIT — free to use and adapt.
